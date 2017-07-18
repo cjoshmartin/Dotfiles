@@ -1,46 +1,71 @@
-""
-"" Janus setup
-""
-nnoremap <F6> :w
-set rtp+=/usr/local/opt/fzf
+" Pathogen setup
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" personal setup
+let mapleader=","       " leader is comma
 set mouse=a
-" Define paths
-if has('win32') || has('win64') || has('win32unix')
-  let g:janus_path = escape(expand("~/.vim/janus/vim"), ' ')
-  let g:janus_vim_path = escape(expand("~/.vim/janus/vim"), ' ')
-else
-  let g:janus_path = escape(fnamemodify(resolve(expand("<sfile>:p")), ":h"), ' ')
-  let g:janus_vim_path = escape(fnamemodify(resolve(expand("<sfile>:p" . "vim")), ":h"), ' ')
-endif
-let g:janus_custom_path = expand("~/.janus")
+nnoremap <F6> :w
+set guifont=Menlo\ Regular:h18 "font
+set showcmd             " show command in bottom bar
 
-" Source janus's core
-exe 'source ' . g:janus_vim_path . '/core/before/plugin/janus.vim'
+" Indentation settings for using 4 spaces instead of tabs.
+" " Do not change 'tabstop' from its default value of 8 with this setup.
+ set shiftwidth=4
+ set softtabstop=4
+ set expandtab
 
-" You should note that groups will be processed by Pathogen in reverse
-" order they were added.
-call janus#add_group("tools")
-call janus#add_group("langs")
-call janus#add_group("colors")
+" Nerd Tree stuff
 
-""
-"" Customisations
-""
+autocmd StdinReadPre * let s:std_in=1 
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif "Controls how nerdtree will auto open
 
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+nmap <leader>t :NERDTreeToggle<CR> " Open tree 
+nmap <leader>j :NERDTreeFind<CR> " search tree
+
+let NERDTreeShowHidden=1 " show hidden files
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Closes nerdTree if the vim buffer is the only one open
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 
-" Disable plugins prior to loading pathogen
-exe 'source ' . g:janus_vim_path . '/core/plugins.vim'
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-""
-"" Pathogen setup
-""
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
-" Load all groups, custom dir, and janus core
-call janus#load_pathogen()
+" Airline
+"
+let g:airline#extensions#tabline#enabled = 1
 
-" .vimrc.after is loaded after the plugins have loaded
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+
+let base16colorspace=256  " Access colors present in 256 colorspace
+
+"reload vim with closing 
+map <leader>s :source ~/.vimrc<CR> " \s
+
+" save more history
+set hidden
+set history=100
+
+" JSX Highlighting
+let g:jsx_ext_required = 0
+
+"CPP Highlighting
+
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_concepts_highlight = 1
 
