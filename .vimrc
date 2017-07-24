@@ -1,7 +1,26 @@
-" Pathogen setup
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+
+call plug#begin('~/.vim/plugged')
+
+
+"" Plugs go here!
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdcommenter'
+
+"" Text hightlighting
+
+Plug 'bfrg/vim-cpp-enhanced-highlight'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-markdown'
+Plug 'elzr/vim-json'
+
+
+"" Color scheme
+Plug 'w0ng/vim-hybrid'
+
+" Initialize plugin system
+call plug#end()
 
 " personal setup
 let mapleader=","       " leader is comma
@@ -10,11 +29,21 @@ nnoremap <F6> :w
 set guifont=Menlo\ Regular:h18 "font
 set showcmd             " show command in bottom bar
 
+" Note:
+" `"+y` - copy to clipboard
+" `"+p` or `:put +` - paste from clipboard 
+set clipboard=unnamed "sets vim's clipboard to the system clipboard (NOTE: a version of vim with clipboard support is required)
+
+
+filetype plugin on 
+
 " Indentation settings for using 4 spaces instead of tabs.
 " " Do not change 'tabstop' from its default value of 8 with this setup.
  set shiftwidth=4
  set softtabstop=4
  set expandtab
+
+
 
 " Nerd Tree stuff
 
@@ -32,14 +61,14 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " Airline
 "
@@ -69,3 +98,7 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
+
+"color scheme settings
+set background=dark
+colorscheme hybrid
