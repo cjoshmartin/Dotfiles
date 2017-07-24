@@ -9,4 +9,18 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ln -sfv "$DOTFILES_DIR/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
+
+#install vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+#Linking vim
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
+
+
+
+
+if [ "$(uname)" == "Darwin" ]; then
+ # install vim plug for mac
+
+fi
