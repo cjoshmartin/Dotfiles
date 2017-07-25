@@ -20,7 +20,7 @@ ln -sfv "$DOTFILES_DIR/.vimrc" ~
 
 
 
-if [ "$(uname)" == "Darwin" ]; then
+#if [ "$(uname)" == "Darwin" ]; then
  # install vim plug for mac
 
-fi
+# fi
