@@ -27,6 +27,7 @@ then
     linuxInstaller "git"
     linuxInstaller "zsh"
     linuxInstaller "vim"
+    linuxInstaller "tmux"
 fi
 
 # getting started with symlinks : https://github.com/webpro/dotfiles/blob/b04b26b33df7b7331315c70e92b635f42cf01bf2/install.sh#L20
