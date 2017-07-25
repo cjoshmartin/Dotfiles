@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# check if a program is installer, if not will install it.
 linuxInstaller(){
 
     command -v $1 >/dev/null 2>&1 || { apt-get install -y $1; } 
@@ -25,6 +26,7 @@ then
     linuxInstaller "curl"
     linuxInstaller "git"
     linuxInstaller "zsh"
+    linuxInstaller "vim"
 fi
 
 # getting started with symlinks : https://github.com/webpro/dotfiles/blob/b04b26b33df7b7331315c70e92b635f42cf01bf2/install.sh#L20
