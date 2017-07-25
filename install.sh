@@ -16,10 +16,11 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
 if [ "$(uname)" == "Darwin" ]
-    echo "Hello Mac User!"
 then
+    echo "Hello Mac User!"
  # install vim plug for mac
 elif ["$(uname)"=="Linux"]
+then
     apt-get update
     linuxInstaller "curl"
     linuxInstaller "git"
@@ -32,13 +33,7 @@ ln -sfv "$DOTFILES_DIR/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/.vimrc" ~
 
-#check if plug is install if not, installs it
-if [! -e ~/.vim/autoload/plug.vim]
-then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-#Linking vim
+
 
 
 
