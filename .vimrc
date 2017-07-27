@@ -109,3 +109,7 @@ let g:cpp_concepts_highlight = 1
 "color scheme settings
 set background=dark
 colorscheme hybrid
+
+"screen work
+set t_Co=256
+set term=xterm-256color
