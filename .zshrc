@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export TERM=screen-256color-bce
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/josh/.oh-my-zsh
 
