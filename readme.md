@@ -19,6 +19,6 @@ chmod 755 ./install.sh
  # paste that into the following command
  docker run -it [docker image id]
  
- # to remove all docker containors type:
+ # to remove all docker containers type:
  docker rm $(docker ps -a -q)
 ```
