@@ -20,6 +20,23 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-markdown'
 Plug 'elzr/vim-json'
 
+"" Fuzz finder 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+"autocomplete
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 "" Color scheme
 Plug 'w0ng/vim-hybrid'
@@ -33,6 +50,9 @@ set mouse=a
 nnoremap <F6> :w
 set guifont=Menlo\ Regular:h18 "font
 set showcmd             " show command in bottom bar
+set number 
+map ; :
+set backspace=indent,eol,start
 
 " Note:
 " `"+y` - copy to clipboard
@@ -74,8 +94,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 
-"reload vim with closing 
-map <leader>s :source ~/.vimrc<CR> " \s
+"reload vim without closing 
+map <leader>s :source %<CR>
 
 " save more history
 set hidden
@@ -92,11 +112,13 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
+"fzf settings
+map <leader>f :Files<CR>
+map <leader>b :Buffers<CR>
+
+
 
 "color scheme settings
 set background=dark
 colorscheme hybrid
 
-"screen work
-set t_Co=256
-set term=xterm-256color
