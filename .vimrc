@@ -7,8 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
-
 "" Plugs go here!
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -22,6 +20,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-markdown'
 Plug 'elzr/vim-json'
 
+"" fuzz finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 "" Color scheme
 Plug 'w0ng/vim-hybrid'
@@ -41,6 +42,8 @@ set showcmd             " show command in bottom bar
 " `"+p` or `:put +` - paste from clipboard 
 set clipboard=unnamed "sets vim's clipboard to the system clipboard (NOTE: a version of vim with clipboard support is required)
 
+""  to lazy to hold shift
+map ; :
 
 filetype plugin on 
 
@@ -66,17 +69,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-
-" Syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
+"" FZF.vim
+nmap <leader>f  :Files<CR> 
+nmap <leader>b :Buffers<CR>
 " Airline
 "
 let g:airline#extensions#tabline#enabled = 1
