@@ -1,6 +1,12 @@
-FROM ubuntu@16.04
+# this Dockerfile is for testing my dotfiles
+FROM ubuntu
 MAINTAINER Josh Martin <contact@cjoshmartin.com>
 
+RUN apt-get update && \
+    apt-get install -y git \
+    && apt-get clean
 
-RUN locale-gen en_US.UTF-8
-RUN 
+RUN cd $HOME && \
+    git clone https://github.com/cjoshmartin/Dotfiles.git .dotfiles
+
+RUN ~/.dotfiles/install.sh

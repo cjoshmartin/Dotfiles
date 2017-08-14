@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+        "spec": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/apm-install-dir-11755-85663-hlq1ys.ob679icnmi"
+    ]
+  ],
+  "_from": "../d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+  "_id": "pure-syntax@0.2.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/pure-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+    "spec": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+  "_shasum": "b8fe8e3190277573c8af246295391aa30e46061c",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/d-11755-85663-1dn4aie.9sxkowdn29/package.tgz",
+  "_where": "/private/var/folders/67/dvcjnfx93t1fd4268_vjgw9m0000gn/T/apm-install-dir-11755-85663-hlq1ys.ob679icnmi",
+  "bugs": {
+    "url": "https://github.com/nkpfstr/pure-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "A clear & colorful syntax theme for Atom.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/nkpfstr/pure-syntax#readme",
+  "keywords": [
+    "pure",
+    "clear",
+    "colorful",
+    "dark",
+    "practical",
+    "syntax"
+  ],
+  "license": "MIT",
+  "name": "pure-syntax",
+  "optionalDependencies": {},
+  "readme": "\n![Title](https://media.githubusercontent.com/media/nkpfstr/pure-syntax/master/art/title.png)\n\n![Example](https://media.githubusercontent.com/media/nkpfstr/pure-syntax/master/art/example.png)\n\n> The font used in the screenshot is [Office Code Pro](https://github.com/nathco/Office-Code-Pro).\n\n# Install\n\nFrom the command line:\n\n`apm install pure-syntax`\n\nIf the command line isn't your thing:\n\n- Go to **Settings > Install**\n- Search for `pure-syntax` and click **Install**\n- Go to **Settings > Themes** and choose **Pure** from the dropdown menu\n- Happy coding! :heart:\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkpfstr/pure-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.2.1",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

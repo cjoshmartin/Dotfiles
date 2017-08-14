@@ -1,0 +1,30 @@
+"*":
+  "atom-clock":
+    dateFormat: "h:mm a"
+    showClockIcon: true
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "pristine-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontFamily: "FiraCode-light"
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "f3a758b2-eff0-41e5-8c0c-c07cab1fa8f6"
+  pigments:
+    markerType: "gutter"
+  "pristine-ui":
+    layoutMode: "Spacious"
+    tabSizing: "Even"
+  "vim-mode-plus":
+    keymapUnderscoreToReplaceWithRegister: true
+  welcome:
+    showOnStartup: false
+dash:
+  grammars:
+    JavaScript: [
+      "nodejs"
+    ]
