@@ -129,7 +129,7 @@ let g:cpp_concepts_highlight = 1
 "fzf settings
 map <leader>f :Files<CR>
 map <leader>b :Buffers<CR>
-
+map <leader>m :Maps<CR>
 
 "Workspaces
 nnoremap <leader>w :ToggleWorkspace<CR>
@@ -145,4 +145,4 @@ nnoremap <leader>q :Bclose<CR>
 "color scheme settings
 set background=dark
 colorscheme hybrid
-
+set t_Co=256
