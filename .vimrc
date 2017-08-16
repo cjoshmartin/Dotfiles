@@ -5,8 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
-
 "" Plugs go here!
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -28,11 +26,9 @@ Plug 'thaerkh/vim-workspace'
 "for closing current buffer (:Bclose)
 Plug 'rbgrouleff/bclose.vim'
 
-"" Fuzz finder
+"" fuzz finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
-"autocomplete
 
 function! BuildYCM(info)
   " info is a dictionary with 3 fields
@@ -67,6 +63,8 @@ set backspace=indent,eol,start
 " `"+p` or `:put +` - paste from clipboard
 set clipboard=unnamed "sets vim's clipboard to the system clipboard (NOTE: a version of vim with clipboard support is required)
 
+""  to lazy to hold shift
+map ; :
 
 filetype plugin on
 
@@ -91,7 +89,6 @@ let NERDTreeShowHidden=1 " show hidden files
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Closes nerdTree if the vim buffer is the only one open
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-
 
 " Airline
 "
