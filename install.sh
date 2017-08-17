@@ -37,11 +37,11 @@ fi
 
 # getting started with symlinks : https://github.com/webpro/dotfiles/blob/b04b26b33df7b7331315c70e92b635f42cf01bf2/install.sh#L20
 
-ln -sfv "$DOTFILES_DIR/.zshrc" ~
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-ln -sfv "$DOTFILES_DIR/.tmux.conf" ~
-ln -sfv "$DOTFILES_DIR/.vimrc" ~
-ln -sfv "$DOTFILES_DIR/.atom" ~
+ln -sfv $DOTFILES_DIR/zshrc ~/.zshrc
+ln -sfv $DOTFILES_DIR/tmux.conf ~/.tmux.conf
+ln -sfv $DOTFILES_DIR/vimrc ~/.vimrc
+sudo ln -sfv "$DOTFILES_DIR/.atom" ~/.atom
 
 
 
