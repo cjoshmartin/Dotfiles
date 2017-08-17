@@ -39,7 +39,7 @@ fi
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ln -sfv $DOTFILES_DIR/zshrc ~/.zshrc
-ln -sfv $DOTFILES_DIR/tmux.conf ~/.tmux.conf
+ln -sfv $DOTFILES_DIR/tmux ~/.tmux.conf
 ln -sfv $DOTFILES_DIR/vimrc ~/.vimrc
 sudo ln -sfv "$DOTFILES_DIR/.atom" ~/.atom
 
