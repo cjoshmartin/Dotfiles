@@ -10,7 +10,7 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="miloshadzic"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="false"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -20,7 +20,7 @@ ZSH_THEME="miloshadzic"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -84,24 +84,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Work Stuff
+# (old) Work Stuff
 alias cnbuild="cd /Users/Josh/Documents/Cyberlab/cndoc/docker-dev; docker-compose build"
 alias cnrun="cd /Users/Josh/Documents/Cyberlab/cndoc/docker-dev; docker-compose restart"
 alias cn="cd /Users/Josh/Documents/Cyberlab"
 alias testing="cd  /Users/Josh/Documents/Cyberlab/testing"
+
 #http  stuff
 alias host="sudo killall -HUP mDNSResponder;sudo nano /etc/hosts"
 ngrok(){
   ~/ngrok $*
 }
+
 #Changing Dir
 alias doc="cd ~/Documents/"
 alias down="cd ~/Downloads/"
 alias website="cd /Users/Josh/Documents/cjoshmartin.github.io"
 alias c240="cd /Users/Josh/BitTorrent\ Sync/School/Sophomore/Spring\ Semester/CSCI\ 24000\ Computing\ II"
+
 #alias updating
 alias newa="vim ~/.zshrc"
 alias builda="source ~/.zshrc"
+
 # Important commemt, helps me remeber what is in this file -- Updated often
 alias lsa="sed -n 86,133p ~/.zshrc"
 
@@ -134,7 +138,12 @@ alias tesla="ssh chajmart@tesla.cs.iupui.edu"
 #getting ip
 alias ip="ipconfig getifaddr en0"
 
+# pass aggressive way to deal with being upset
+alias fucking=sudo
+
 alias path="echo $PWD"
 alias cpath="path | pbcopy" #copies path to clipboard
 #removing clear DS_store
 alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
+
+eval $(thefuck --alias)
