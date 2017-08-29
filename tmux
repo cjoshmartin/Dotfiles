@@ -12,6 +12,24 @@ bind \ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
 
+
+# Ctrl-space,Escape   # enter copy mode
+# move cursor to the start or end of the desired text string
+#  v                        # to activate highlighting
+# move cursor to cover the requisite string
+# y                        # to capture the string
+# q                        # exit copy mode
+# Ctrl-space,p       # put/paste the text in the desired location
+
+set-window-option -g mode-keys vi
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+
+
 # TODO: quitting quicker
 
 # Enable mouse mode (tmux 2.1 and above)
@@ -54,6 +72,7 @@ setw -g window-status-current-attr dim
 setw -g window-status-bg green
 setw -g window-status-fg black
 setw -g window-status-attr reverse
+
 
 # Info on left (I don't have a session display for now)
 set -g status-left ''
