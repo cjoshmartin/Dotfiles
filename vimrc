@@ -42,8 +42,6 @@ endfunction
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
-"" Color scheme
-Plug 'w0ng/vim-hybrid'
 
 " Initialize plugin system
 call plug#end()
@@ -140,6 +138,4 @@ nnoremap <leader>q :Bclose<CR>
 
 
 "color scheme settings
-set background=dark
-colorscheme hybrid
-set t_Co=256
+colorscheme slate
