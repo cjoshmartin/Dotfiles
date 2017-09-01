@@ -8,5 +8,6 @@ RUN apt-get update && \
 
 RUN cd $HOME && \
     git clone https://github.com/cjoshmartin/Dotfiles.git .dotfiles
+RUN cd ~/.dotfiles; git checkout testing_imports
 
 RUN ~/.dotfiles/install.sh
