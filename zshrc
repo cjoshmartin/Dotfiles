@@ -68,7 +68,8 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-
+#
+#fix problems with tmux spawning a bash session
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -146,3 +147,7 @@ alias cpath="path | pbcopy" #copies path to clipboard
 #removing clear DS_store
 alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
 
+
+eval $(thefuck --alias)
+
+fortune | ponysay

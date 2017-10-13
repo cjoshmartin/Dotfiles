@@ -8,6 +8,13 @@ unbind '"'
 unbind %
 #unbind \
 
+# set shell
+set -g default-shell /bin/zsh
+set-option -g default-shell /bin/zsh
+
+# Retach userspaces
+set -g default-command "reattach-to-user-namespace -l zsh"
+
 bind \ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
@@ -26,14 +33,17 @@ unbind [
 bind Escape copy-mode
 unbind p
 bind p paste-buffer
-bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-selection
+#bind-key -t vi-copy 'v' begin-selection
+#bind-key -t vi-copy 'y' copy-selection
 
 
 # TODO: quitting quicker
 
 # Enable mouse mode (tmux 2.1 and above)
 setw -g mouse on
+
+
+set-option -g default-command "reattach-to-user-namespace -l bash"
 
 ######################
 ### DESIGN CHANGES ###

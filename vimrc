@@ -53,6 +53,7 @@ nnoremap <F6> :w
 set guifont=Menlo\ Regular:h18 "font
 set showcmd             " show command in bottom bar
 set number
+set relativenumber
 map ; :
 set backspace=indent,eol,start
 
