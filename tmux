@@ -9,11 +9,11 @@ unbind %
 #unbind \
 
 # set shell
-set -g default-shell /bin/zsh
-set-option -g default-shell /bin/zsh
+set -g default-shell /usr/local/bin/fish
+set-option -g default-shell /usr/local/bin/fish
 
 # Retach userspaces
-set -g default-command "reattach-to-user-namespace -l zsh"
+set -g default-command "reattach-to-user-namespace -l fish"
 
 bind \ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"

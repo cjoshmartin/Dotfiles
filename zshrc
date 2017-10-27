@@ -108,7 +108,7 @@ alias newa="vim ~/.zshrc"
 alias builda="source ~/.zshrc"
 
 # Important commemt, helps me remeber what is in this file -- Updated often
-alias lsa="sed -n 86,133p ~/.zshrc"
+alias lsa="sed -n 86,148p ~/.zshrc"
 
 vs(){
   
@@ -151,3 +151,5 @@ alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
 eval $(thefuck --alias)
 
 fortune | ponysay
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

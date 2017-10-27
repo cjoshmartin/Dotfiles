@@ -14,6 +14,7 @@ Plug 'scrooloose/nerdcommenter'
 "" Text hightlighting
 
 Plug 'bfrg/vim-cpp-enhanced-highlight'
+Plug 'Rip-Rip/clang_complete'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-markdown'
@@ -45,7 +46,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " Initialize plugin system
 call plug#end()
-
+ "PlugUpdate " TODO:  autoupdate when vim starts
 " personal setup
 let mapleader=","       " leader is comma
 set mouse=a
@@ -56,6 +57,13 @@ set number
 set relativenumber
 map ; :
 set backspace=indent,eol,start
+
+set backup " Vim keeps deleting my work, ugh!
+set backupdir=/var/tmp,/tmp "backups are not in the directory
+set directory=/var/tmp,/tmp " yay no more commiting swaps to git
+" keep files up today
+set autoread
+au CursorHold * checktime
 
 " Note:
 " `"+y` - copy to clipboard
@@ -140,3 +148,4 @@ nnoremap <leader>q :Bclose<CR>
 
 "color scheme settings
 colorscheme slate
+let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
