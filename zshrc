@@ -147,9 +147,4 @@ alias cpath="path | pbcopy" #copies path to clipboard
 #removing clear DS_store
 alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
 
-
-eval $(thefuck --alias)
-
-fortune | ponysay
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
