@@ -43,8 +43,6 @@ bind p paste-buffer
 setw -g mouse on
 
 
-set-option -g default-command "reattach-to-user-namespace -l bash"
-
 ######################
 ### DESIGN CHANGES ###
 ######################
