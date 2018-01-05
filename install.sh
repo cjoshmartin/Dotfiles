@@ -19,6 +19,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$(uname)" == "Darwin" ]
 then
     echo "Hello Mac User!"
+    brew install fish
  # install vim plug for mac
 elif [ "$(uname)" == "Linux" ]
 then
@@ -29,19 +30,13 @@ then
     LinuxInstaller "git-core"
     linuxInstaller "tmux"
     linuxInstaller "vim-gtk" # vim with +clipboard
-    echo " \n \n \n  Oh-my-zsh in needs to be install manually \n\n " 
-
-
+    sudo apt-add-repository ppa:fish-shell/release-2
+    sudo apt-get update
+    sudo apt-get install fish
 fi
 
 
-# getting started with symlinks : https://github.com/webpro/dotfiles/blob/b04b26b33df7b7331315c70e92b635f42cf01bf2/install.sh#L20
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-ln -sfv $DOTFILES_DIR/zshrc ~/.zshrc
-ln -sfv $DOTFILES_DIR/tmux ~/.tmux.conf
-ln -sfv $DOTFILES_DIR/vimrc ~/.vimrc
+curl -L https://get.oh-my.fish | fish
 
-
-
-
+. "$DOTFILES_DIR/linking.sh"

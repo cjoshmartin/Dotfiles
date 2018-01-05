@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
-
 "" Text hightlighting
 
 Plug 'bfrg/vim-cpp-enhanced-highlight'
@@ -20,16 +19,44 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'ervandew/eclim'
+Plug 'tmux-plugins/vim-tmux' 
+Plug 'ekalinin/Dockerfile.vim'
+"js setup
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'ternjs/tern_for_vim'
+" clang setup?
+Plug 'JBakamovic/yavide'
 
 "vim-workspaces
 Plug 'thaerkh/vim-workspace'
 
+" Open brower windows
+Plug 'tyru/open-browser.vim'
+
+" better window navigation
+Plug 't9md/vim-choosewin'
+
 "for closing current buffer (:Bclose)
 Plug 'rbgrouleff/bclose.vim'
 
+"inline git files diffs
+Plug 'mhinz/vim-signify'
+
+" cool plugin to test code
+Plug 'metakirby5/codi.vim'
+
+"A class outline for c++ or the OOP 
+Plug 'majutsushi/tagbar'
+
+" vim-startify
+Plug 'mhinz/vim-startify'
 "" fuzz finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Asynchronous Lint Engine
+Plug 'w0rp/ale'
 
 function! BuildYCM(info)
   " info is a dictionary with 3 fields
@@ -42,11 +69,13 @@ function! BuildYCM(info)
 endfunction
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
-
+" better in file search
+Plug 'haya14busa/incsearch.vim'
 " Initialize plugin system
 call plug#end()
- "PlugUpdate " TODO:  autoupdate when vim starts
+
 " personal setup
 let mapleader=","       " leader is comma
 set mouse=a
@@ -145,7 +174,18 @@ let g:workspace_undodir='.undodir'
 " Closing the current buffer
 nnoremap <leader>q :Bclose<CR>
 
+" incsearch.vim 
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
+" vim-choosewin
+nmap  -  <Plug>(choosewin)
+
+" ale 
+let g:ale_completion_enabled = 1
+
+nmap <leader>c :TagbarToggle<CR>
 "color scheme settings
 colorscheme slate
 let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
