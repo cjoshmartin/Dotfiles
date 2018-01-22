@@ -1,7 +1,7 @@
 # Josh's Dotfiles
 ## To Install:
 ```bash
-https://raw.githubusercontent.com/cjoshmartin/Dotfiles/master/install.sh | bash
+curl https://raw.githubusercontent.com/cjoshmartin/Dotfiles/master/install.sh | bash
 ```
 
 ## Notes:
