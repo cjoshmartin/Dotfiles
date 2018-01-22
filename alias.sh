@@ -17,6 +17,12 @@ alias cpath="path | pbcopy" #copies path to clipboard
 #removing clear DS_store
 alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
 
+#when I  write speeches
+alias speechserver="browser-sync start --server --files \"*.html, *.css, *.md\" "
+
+# build Aliases
+alias builda="source ~/.terminal_aliases"
+
 # list aliases
 alias als="cat ~/.terminal_aliases"
 
