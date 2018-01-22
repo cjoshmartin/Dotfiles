@@ -30,6 +30,10 @@ function fish_prompt
   echo -n -s $cwd $red '|' $git_info $normal ⇒ ' ' $normal
 end
 
-
+export REACT_EDITOR=code
 # linking aliases 
-. "~/.dotfiles/alias.sh"
+source ~/.terminal_aliases
+
+function vim 
+    command nvim $argv
+end

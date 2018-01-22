@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# NOTE: if neovim isn't playing nicely run :CheckHealth
+
 # get the current location of the director
 
 export DOTFILES_DIR

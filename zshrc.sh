@@ -28,14 +28,12 @@ source $ZSH/oh-my-zsh.sh
 
 # linking Aliases
 
-. "$DOTFILES_DIR/alias.sh"
+source ~/.terminal_aliases
 
-grok(){
+ngrok(){
   ~/ngrok $*
 }
 
 eval $(thefuck --alias)
-
-fortune | ponysay
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

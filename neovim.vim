@@ -5,3 +5,4 @@
 
     set termguicolors
     
+   set clipboard+=unnamedplus 

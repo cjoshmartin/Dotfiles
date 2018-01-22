@@ -10,6 +10,10 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv $DOTFILES_DIR/zshrc.sh ~/.zshrc
 ln -sfv $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 ln -sfv $DOTFILES_DIR/vimrc.vim ~/.vimrc
+ln -sfv $DOTFILES_DIR/alias.sh ~/.terminal_aliases
+
+ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
+
 mkdir ~/.config/nvim
 ln -sfv $DOTFILES_DIR/neovim.vim ~/.config/nvim/init.vim
 
