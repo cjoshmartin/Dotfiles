@@ -20,6 +20,9 @@ alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
 #when I  write speeches
 alias speechserver="browser-sync start --server --files \"*.html, *.css, *.md\" "
 
+# Unit Testing
+alias download_catch="wget https://github.com/catchorg/Catch2/releases/download/v2.1.2/catch.hpp"
+
 # build Aliases
 alias builda="source ~/.terminal_aliases"
 
