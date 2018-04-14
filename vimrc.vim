@@ -58,18 +58,13 @@ Plug 'junegunn/fzf.vim'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
-
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " better in file search
 Plug 'haya14busa/incsearch.vim'
@@ -93,6 +88,8 @@ set directory=/var/tmp,/tmp " yay no more commiting swaps to git
 " keep files up today
 set autoread
 au CursorHold * checktime
+"oppsite of "J"
+nnoremap K i<CR><Esc>
 
 " Note:
 " `"+y` - copy to clipboard
@@ -185,6 +182,8 @@ nmap  -  <Plug>(choosewin)
 
 " ale 
 let g:ale_completion_enabled = 1
+
+let g:deoplete#enable_at_startup = 1
 
 nmap <leader>c :TagbarToggle<CR>
 "color scheme settings
