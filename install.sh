@@ -11,8 +11,17 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$(uname)" == "Darwin" ]
 then
     echo "Hello Mac User!"
-    brew install fish
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew update
+    brew install wget curl fish nvim nodejs npm tmux python3 ssh-copy-id
+    brew install caskroom/cask/iterm2
+    brew install caskroom/cask/google-chrome
+    brew tap caskroom/cask
+    brew cask install lastpass
+    brew cask install atom
+    brew cask install spotify
  # install vim plug for mac
+
 elif [ "$(uname)" == "Linux" ]
 then
     sudo apt-add-repository ppa:fish-shell/release-2
@@ -24,6 +33,9 @@ then
     ln -s /usr/bin/nodejs /usr/bin/node
 fi
 
+pip install --upgrade pip
+pip3 install neovim
+pip3 install --user neovim jedi psutil setproctitle # nvim
 
 
 curl -L https://get.oh-my.fish | fish
