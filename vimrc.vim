@@ -57,15 +57,28 @@ Plug 'junegunn/fzf.vim'
 
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
+"
+" auto complete
+"Plug 'roxma/nvim-completion-manager'
+"
+"if has('nvim')
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+  "Plug 'Shougo/deoplete.nvim'
+  "Plug 'roxma/nvim-yarp'
+  "Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 " better in file search
 Plug 'haya14busa/incsearch.vim'
 " Initialize plugin system
@@ -183,7 +196,8 @@ nmap  -  <Plug>(choosewin)
 " ale 
 let g:ale_completion_enabled = 1
 
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
+
 
 nmap <leader>c :TagbarToggle<CR>
 "color scheme settings
