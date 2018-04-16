@@ -19,7 +19,10 @@ then
     brew tap caskroom/cask
     brew cask install lastpass
     brew cask install atom
+    brew cask install jetbrains-toolbox
     brew cask install spotify
+    brew tap caskroom/fonts
+    brew cask install font-fira-code
  # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
