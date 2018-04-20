@@ -13,7 +13,7 @@ then
     echo "Hello Mac User!"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
-    brew install wget curl fish nvim nodejs npm tmux python3 ssh-copy-id
+    brew install wget curl fish nvim nodejs npm tmux python3 ssh-copy-id pandoc
     brew install caskroom/cask/iterm2
     brew install caskroom/cask/google-chrome
     brew tap caskroom/cask
@@ -23,16 +23,19 @@ then
     brew cask install spotify
     brew tap caskroom/fonts
     brew cask install font-fira-code
+    brew cask install duet
  # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
 then
-    sudo apt-add-repository ppa:fish-shell/release-2
-    sudo apt-get update
-    sudo apt-get install fish
-    apt-get update
-    apt-get install -y curl git zsh git-core tmux vim-gtk
-    sudo apt-get install -y nodejs npm
+    sudo apt-get install -y software-properties-common
+    sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+    sudo add-apt-repository -y  ppa:neovim-ppa/stable
+    sudo apt-add-repository -y  ppa:fish-shell/release-2
+    sudo apt update
+    sudo apt install -y fish neovim
+    apt install -y curl git zsh git-core tmux vim-gtk nvim
+    sudo apt install -y nodejs npm
     ln -s /usr/bin/nodejs /usr/bin/node
 fi
 
