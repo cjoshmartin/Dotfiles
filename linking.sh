@@ -17,4 +17,6 @@ ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
 mkdir ~/.config/nvim
 ln -sfv $DOTFILES_DIR/neovim.vim ~/.config/nvim/init.vim
 
+mkdir ~/.config/fish/
+mkdir ~/.config/fish/functions/
 ln -sfv $DOTFILES_DIR/fish_terminal.sh ~/.config/fish/functions/fish_prompt.fish
