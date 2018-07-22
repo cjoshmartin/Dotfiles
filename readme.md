@@ -1,4 +1,5 @@
 # Josh's Dotfiles
+[![Build Status](https://travis-ci.org/cjoshmartin/Dotfiles.svg?branch=master)](https://travis-ci.org/cjoshmartin/Dotfiles)
 ## To Install:
 ```bash
 curl https://raw.githubusercontent.com/cjoshmartin/Dotfiles/master/install.sh | bash
@@ -7,17 +8,6 @@ curl https://raw.githubusercontent.com/cjoshmartin/Dotfiles/master/install.sh | 
 ## Notes:
 
 #### Requires
- - vim, git, curl and zsh
+ - vim, git, curl
  
  
-#### Running the dockerfile 
-
-```bash
- docker build .
- # afterwards it will give you a image id
- # paste that into the following command
- docker run -it [docker image id]
- 
- # to remove all docker containers type:
- docker rm $(docker ps -a -q)
-```
