@@ -24,6 +24,7 @@ then
     brew tap caskroom/fonts
     brew cask install font-fira-code
     brew cask install duet
+    echo "Fish need to be install manually. For Mac"
  # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
@@ -37,6 +38,7 @@ then
     apt install -y curl git zsh git-core tmux vim-gtk nvim
     sudo apt install -y nodejs npm
     ln -s /usr/bin/nodejs /usr/bin/node
+    curl -L https://get.oh-my.fish | fish
 fi
 
 pip install --upgrade pip
@@ -44,6 +46,5 @@ pip3 install neovim
 pip3 install --user neovim jedi psutil setproctitle # nvim
 
 
-curl -L https://get.oh-my.fish | fish
 
 . "$DOTFILES_DIR/linking.sh"
