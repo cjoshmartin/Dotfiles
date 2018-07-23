@@ -14,6 +14,7 @@ ln -sfv $DOTFILES_DIR/alias.sh ~/.terminal_aliases
 
 ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
 
+mkdir ~/.config
 mkdir ~/.config/nvim
 ln -sfv $DOTFILES_DIR/neovim.vim ~/.config/nvim/init.vim
 
