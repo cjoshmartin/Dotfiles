@@ -30,4 +30,4 @@ alias builda="source ~/.terminal_aliases"
 alias als="cat ~/.terminal_aliases"
 
 curl -s https://api.github.com/octocat #pretty octocat with a quote
-als
+echo "To See alias type: `als`"
