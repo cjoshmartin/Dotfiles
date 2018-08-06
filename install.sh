@@ -48,3 +48,4 @@ pip3 install --user neovim jedi psutil setproctitle # nvim
 
 
 . "$DOTFILES_DIR/linking.sh"
+. "$DOTFILES_DIR/git_config.sh"
