@@ -42,8 +42,8 @@ then
 fi
 
 pip install --upgrade pip
-pip3 install neovim
-pip3 install --user neovim jedi psutil setproctitle # nvim
+pip install neovim
+pip install --user neovim jedi psutil setproctitle # nvim
 
 
 
