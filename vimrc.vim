@@ -59,26 +59,26 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 "
 " auto complete
-"Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/nvim-completion-manager'
 "
-"if has('nvim')
-  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-  "Plug 'Shougo/deoplete.nvim'
-  "Plug 'roxma/nvim-yarp'
-  "Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+"function! BuildYCM(info)
+  "" info is a dictionary with 3 fields
+  "" - name:   name of the plugin
+  "" - status: 'installed', 'updated', or 'unchanged'
+  "" - force:  set on PlugInstall! or PlugUpdate!
+  "if a:info.status == 'installed' || a:info.force
+    "!./install.py
+  "endif
+"endfunction
 
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+"Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 " better in file search
 Plug 'haya14busa/incsearch.vim'
 " Initialize plugin system
@@ -196,8 +196,11 @@ nmap  -  <Plug>(choosewin)
 " ale 
 let g:ale_completion_enabled = 1
 
-"let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
+" check one time after 4s of inactivity in normal mode
+set autoread                                                                                                                                                                                    
+au CursorHold * checktime 
 
 nmap <leader>c :TagbarToggle<CR>
 "color scheme settings
