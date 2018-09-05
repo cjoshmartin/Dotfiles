@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# NOTE: if neovim isn't playing nicely run :CheckHealth
+# NOTE: if neovim isn't playing nicely run :CheckHealth, python might not be install correctly
 
 # get the current location of the director
 
@@ -13,18 +13,34 @@ then
     echo "Hello Mac User!"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
-    brew install wget curl fish nvim nodejs npm tmux python3 ssh-copy-id pandoc
+    # Systems programs
+    brew install\
+        wget\
+        curl\
+        fish\
+        nvim\
+        nodejs\ 
+        npm\ 
+        tmux\
+        python3\
+        ssh-copy-id\
+        pandoc\
+        bat
     brew install caskroom/cask/iterm2
     brew install caskroom/cask/google-chrome
     brew tap caskroom/cask
-    brew cask install lastpass
-    brew cask install atom
-    brew cask install jetbrains-toolbox
-    brew cask install spotify
+    # User Programs
+    brew cask install\
+        lastpass\
+        atom\
+        jetbrains-toolbox\
+        spotify\
+        duet
+    #install programming font
     brew tap caskroom/fonts
     brew cask install font-fira-code
     echo "Oh-myFish need to be install manually. For Mac"
- # install vim plug for mac
+    # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
 then
@@ -33,9 +49,18 @@ then
     sudo add-apt-repository -y  ppa:neovim-ppa/stable
     sudo apt-add-repository -y  ppa:fish-shell/release-2
     sudo apt update
-    sudo apt install -y fish neovim
-    apt install -y curl git zsh git-core tmux vim-gtk nvim
-    sudo apt install -y nodejs npm
+    sudo apt install -y\
+        fish\
+        neovim\
+        curl\
+        git\
+        zsh\
+        git-core\
+        tmux\
+        vim-gtk\
+        nvim\
+        nodejs\ 
+        npm
     ln -s /usr/bin/nodejs /usr/bin/node
     curl -L https://get.oh-my.fish | fish
 fi
