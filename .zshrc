@@ -1,0 +1,1 @@
+ source ~/.terminal_aliases
