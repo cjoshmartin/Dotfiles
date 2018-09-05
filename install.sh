@@ -41,8 +41,8 @@ then
     curl -L https://get.oh-my.fish | fish
 fi
 
-pip install --upgrade pip
-pip install neovim
+. "$DOTFILES_DIR/neovim_python_fix.sh"
+sudo pip install --upgrade pip
 pip install --user neovim jedi psutil setproctitle # nvim
 
 

@@ -58,8 +58,7 @@ Plug 'junegunn/fzf.vim'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 "
-" auto complete
-Plug 'roxma/nvim-completion-manager'
+Plug 'rizzatti/dash.vim'
 "
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -195,7 +194,6 @@ nmap  -  <Plug>(choosewin)
 
 " ale 
 let g:ale_completion_enabled = 1
-
 let g:deoplete#enable_at_startup = 1
 
 " check one time after 4s of inactivity in normal mode
@@ -205,4 +203,7 @@ au CursorHold * checktime
 nmap <leader>c :TagbarToggle<CR>
 "color scheme settings
 colorscheme slate
+
+" might need to change this path based on system
 let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+let g:python3_host_prog ='/Users/josh/.pyenv/versions/neovim3/bin/python'
