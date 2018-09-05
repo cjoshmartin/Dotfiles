@@ -4,6 +4,29 @@
 
 # get the current location of the director
 
+gitInstaller () {
+    # NOTE: package should be in the format of `gituser/repo`
+    local package="$1"
+    local url=`https://api.github.com/repos/${package}/releases/latest`
+    local downloadType=""
+
+    if [ "$(uname)" == "Darwin" ]
+    then
+        $downloadType="browser_download_url.*dmg"
+    elif [ "$(uname)" == "Linux" ]
+    then
+        $downloadType="browser_download_url.*deb"
+    fi
+
+    curl -s $url \
+        | grep $downloadType \
+        | cut -d : -f 2,3 \
+        | tr -d \" \
+        | wget -qi -
+
+    echo "Download Complete"
+}
+
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -63,6 +86,10 @@ then
         npm
     ln -s /usr/bin/nodejs /usr/bin/node
     curl -L https://get.oh-my.fish | fish
+
+    gitInstaller "sharkdp/bat" #not tested
+    echo "need to install sharkdp/bat manual"
+
 fi
 
 . "$DOTFILES_DIR/neovim_python_fix.sh"

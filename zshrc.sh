@@ -37,3 +37,4 @@ ngrok(){
 eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.terminal_aliases
