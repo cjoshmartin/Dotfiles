@@ -13,8 +13,8 @@ ln -sfv $DOTFILES_DIR/vimrc.vim ~/.vimrc
 ln -sfv $DOTFILES_DIR/alias.sh ~/.terminal_aliases
 ln -sfv $DOTFILES_DIR/gitignoreGlobal.sh ~/.gitignore
 
-echo "source ~/.terminal_aliases" >> .bashrc
-echo "source ~/.terminal_aliases" >> .zshrc
+echo "source ~/.terminal_aliases" >> ~/.bashrc
+echo "source ~/.terminal_aliases" >> ~/.zshrc
 
 ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
 
