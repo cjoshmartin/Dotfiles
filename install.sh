@@ -23,8 +23,7 @@ then
     brew cask install spotify
     brew tap caskroom/fonts
     brew cask install font-fira-code
-    brew cask install duet
-    echo "Fish need to be install manually. For Mac"
+    echo "Oh-myFish need to be install manually. For Mac"
  # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
