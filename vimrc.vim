@@ -58,19 +58,25 @@ Plug 'junegunn/fzf.vim'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 "
+
+" auto complete
+"Plug 'ncm2/ncm2'
+
 Plug 'rizzatti/dash.vim'
+
 "
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-"Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
 " better in file search
 Plug 'haya14busa/incsearch.vim'
+
+Plug 'janko-m/vim-test'
 " Initialize plugin system
 call plug#end()
 
