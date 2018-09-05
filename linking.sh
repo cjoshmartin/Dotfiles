@@ -11,8 +11,10 @@ ln -sfv $DOTFILES_DIR/zshrc.sh ~/.zshrc
 ln -sfv $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 ln -sfv $DOTFILES_DIR/vimrc.vim ~/.vimrc
 ln -sfv $DOTFILES_DIR/alias.sh ~/.terminal_aliases
-echo " source ~/.terminal_aliases" >> .bashrc
-echo " source ~/.terminal_aliases" >> .zshrc
+ln -sfv $DOTFILES_DIR/gitignoreGlobal.sh ~/.gitignore
+
+echo "source ~/.terminal_aliases" >> .bashrc
+echo "source ~/.terminal_aliases" >> .zshrc
 
 ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
 

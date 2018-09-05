@@ -27,7 +27,7 @@ alias download_catch="wget https://github.com/catchorg/Catch2/releases/download/
 alias builda="source ~/.terminal_aliases"
 
 # list aliases
-alias als="cat ~/.terminal_aliases"
+alias als="bat ~/.terminal_aliases"
 
 curl -s https://api.github.com/octocat #pretty octocat with a quote
 echo "To See aliases: `als`"
