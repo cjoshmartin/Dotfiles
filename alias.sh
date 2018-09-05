@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 #Changing Dir
 alias doc="cd ~/Documents/"
@@ -30,4 +31,4 @@ alias builda="source ~/.terminal_aliases"
 alias als="bat ~/.terminal_aliases"
 
 curl -s https://api.github.com/octocat #pretty octocat with a quote
-echo "To See aliases: `als`"
+echo "To See aliases: 'als'"
