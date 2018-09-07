@@ -58,7 +58,8 @@ then
         atom\
         jetbrains-toolbox\
         spotify\
-        duet
+        duet\
+        disk-inventory-x
     #install programming font
     brew tap caskroom/fonts
     brew cask install font-fira-code
