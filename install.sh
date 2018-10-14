@@ -58,7 +58,7 @@ then
     # User Programs
     brew cask install lastpass
     brew cask install atom
-    brew cask install brains-toolbox
+    brew cask install jetbrains-toolbox
     brew cask install spotify
     brew cask install duet
     brew cask install disk-inventory-x
