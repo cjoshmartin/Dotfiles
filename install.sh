@@ -60,11 +60,32 @@ then
     brew cask install atom
     brew cask install jetbrains-toolbox
     brew cask install spotify
+    brew cask install slack
+    brew cask install discord
     brew cask install duet
+    brew cask install dash
+    brew cask install dropbox
     brew cask install disk-inventory-x
-    install programming font
+    brew cask install resilio sync
+    brew cask install box-sync
+    brew cask install vlc
+    brew cask install transmission
+    brew cask install wireshark
+    brew cask install angry-ip-scanner
+    brew cask install tunnelblick
+    brew cask install postman
+    brew cask install docker
+    brew cask install gitkraken
+    
+    #install programming font
     brew tap caskroom/fonts
     brew cask install font-fira-code
+
+
+    brew search spectacle             # Searches all known Casks for a partial or exact match.
+    brew cask info spectacle          # Displays information about the given Cask
+    
+    brew cask install spectacle
     #echo "Oh-myFish need to be install manually. For Mac"
     # install vim plug for mac
 
