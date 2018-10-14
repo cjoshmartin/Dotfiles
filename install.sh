@@ -27,6 +27,10 @@ gitInstaller () {
     echo "Download Complete"
 }
 
+brew_ins(){
+    brew install $1
+}
+
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -34,36 +38,34 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$(uname)" == "Darwin" ]
 then
     echo "Hello Mac User!"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
     # Systems programs
-    brew install\
-        wget\
-        curl\
-        fish\
-        nvim\
-        nodejs\ 
-        npm\ 
-        tmux\
-        python3\
-        ssh-copy-id\
-        pandoc\
-        bat
+    brew_ins wget
+    brew_ins curl
+    brew_ins fish
+    brew_ins nvim
+    brew_ins nodejs 
+    brew_ins npm 
+    brew_ins tmux
+    brew_ins python3
+    brew_ins ssh-copy-id
+    brew_ins pandoc
+    brew_ins bat
     brew install caskroom/cask/iterm2
     brew install caskroom/cask/google-chrome
     brew tap caskroom/cask
     # User Programs
-    brew cask install\
-        lastpass\
-        atom\
-        jetbrains-toolbox\
-        spotify\
-        duet\
-        disk-inventory-x
-    #install programming font
+    brew cask install lastpass
+    brew cask install atom
+    brew cask install brains-toolbox
+    brew cask install spotify
+    brew cask install duet
+    brew cask install disk-inventory-x
+    install programming font
     brew tap caskroom/fonts
     brew cask install font-fira-code
-    echo "Oh-myFish need to be install manually. For Mac"
+    #echo "Oh-myFish need to be install manually. For Mac"
     # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
