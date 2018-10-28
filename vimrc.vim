@@ -30,7 +30,7 @@ Plug 'JBakamovic/yavide'
 
 "vim-workspaces
 Plug 'thaerkh/vim-workspace'
-
+Plug '907th/vim-auto-save' " Auto saves
 " Open brower windows
 Plug 'tyru/open-browser.vim'
 
