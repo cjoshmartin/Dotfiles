@@ -76,7 +76,11 @@ then
     brew cask install postman
     brew cask install docker
     brew cask install gitkraken
-    
+    brew cask install mactex   
+
+    brew cask install skim
+    defaults write -app Skim SKAutoReloadFileUpdate -boolean true 
+
     #install programming font
     brew tap caskroom/fonts
     brew cask install font-fira-code

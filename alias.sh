@@ -30,5 +30,8 @@ alias builda="source ~/.terminal_aliases"
 # list aliases
 alias als="bat ~/.terminal_aliases"
 
+#MAC 
+alias skim="open -a Skim.app"
+
 curl -s https://api.github.com/octocat #pretty octocat with a quote
 echo "To See aliases: 'als'"
