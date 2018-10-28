@@ -12,7 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 "" Text hightlighting
 
-Plug 'bfrg/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Rip-Rip/clang_complete'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
