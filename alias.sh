@@ -1,37 +1,33 @@
 #!/usr/bin/env bash
 
-#Changing Dir
-alias doc="cd ~/Documents/"
+# Notes {
+# *setfile (MAC) - allows you to change creation/modication dates of files 
+# *xargs (MAC) - allows you to pipe the output of one program as input to another
+# }
+
+
+#Changing Dir {
 alias down="cd ~/Downloads/"
-alias website="cd /Users/Josh/Documents/cjoshmartin.github.io"
+alias senior="cd ~/Desktop/school/Senior"
+alias projects="cd ~/Desktop/projects"
+#}
 
-#ssh
-alias tesla="ssh chajmart@tesla.cs.iupui.edu"
-#getting ip
-alias ip="ipconfig getifaddr en0"
+alias tesla="ssh chajmart@tesla.cs.iupui.edu" #ssh
+alias ip="ipconfig getifaddr en0" #getting ip
 
-# pass aggressive way to deal with being upset
-alias fucking="sudo"
+alias fucking="sudo" # pass aggressive way to deal with being upset
 
-alias path="echo $PWD"
+alias path="echo $PWD" # Show path
 alias cpath="path | pbcopy" #copies path to clipboard
-#removing clear DS_store
-alias cleards="find . -type f -name '*.DS_Store' -ls -delete"
+alias cleards="find . -type f -name '*.DS_Store' -ls -delete" #removing clear DS_store
 
-#when I  write speeches
-alias speechserver="browser-sync start --server --files \"*.html, *.css, *.md\" "
+alias speechserver="browser-sync start --server --files \"*.html, *.css, *.md\" " #when I  write speeches
 
-# Unit Testing
-alias download_catch="wget https://github.com/catchorg/Catch2/releases/download/v2.1.2/catch.hpp"
+alias builda="source ~/.terminal_aliases" # build Aliases
 
-# build Aliases
-alias builda="source ~/.terminal_aliases"
+alias als="bat ~/.terminal_aliases" # list aliases
 
-# list aliases
-alias als="bat ~/.terminal_aliases"
-
-#MAC 
-alias skim="open -a Skim.app"
+alias skim="open -a Skim.app" #(MAC) : open pdfs
 
 curl -s https://api.github.com/octocat #pretty octocat with a quote
 echo "To See aliases: 'als'"
