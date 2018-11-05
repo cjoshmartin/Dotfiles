@@ -16,7 +16,7 @@ ln -sfv $DOTFILES_DIR/gitignoreGlobal.sh ~/.gitignore
 echo "source ~/.terminal_aliases" >> ~/.bashrc
 echo "source ~/.terminal_aliases" >> ~/.zshrc
 
-ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
+ln -sfv $DOTFILES_DIR/get_shit_done.sh ~/pomodoro.sh
 
 mkdir ~/.config
 mkdir ~/.config/nvim

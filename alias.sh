@@ -12,6 +12,7 @@ alias senior="cd ~/Desktop/school/Senior"
 alias projects="cd ~/Desktop/projects"
 #}
 
+alias pomodoro="~/poamodoro.sh"
 alias tesla="ssh chajmart@tesla.cs.iupui.edu" #ssh
 alias ip="ipconfig getifaddr en0" #getting ip
 
