@@ -25,10 +25,14 @@ alias cleards="find . -type f -name '*.DS_Store' -ls -delete" #removing clear DS
 alias speechserver="browser-sync start --server --files \"*.html, *.css, *.md\" " #when I  write speeches
 
 alias builda="source ~/.terminal_aliases" # build Aliases
-
-alias als="bat ~/.terminal_aliases" # list aliases
-
 alias skim="open -a Skim.app" #(MAC) : open pdfs
+
+# list aliases
+if hash bat 2>/dev/null/; then
+    alias als="bat ~/.terminal_aliases"
+else
+    alias als="cat ~/.terminal_aliases"
+fi
 
 curl -s https://api.github.com/octocat #pretty octocat with a quote
 echo "To See aliases: 'als'"
