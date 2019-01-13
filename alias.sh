@@ -5,6 +5,29 @@ alias doc="cd ~/Documents/"
 alias down="cd ~/Downloads/"
 alias website="cd /Users/Josh/Documents/cjoshmartin.github.io"
 
+gitInstaller () {
+    # NOTE: package should be in the format of `gituser/repo`
+    local package="$1"
+    local url=`https://api.github.com/repos/${package}/releases/latest`
+    local downloadType=""
+
+    if [ "$(uname)" == "Darwin" ]
+    then
+        $downloadType="browser_download_url.*dmg"
+    elif [ "$(uname)" == "Linux" ]
+    then
+        $downloadType="browser_download_url.*deb"
+    fi
+
+    curl -s $url \
+        | grep $downloadType \
+        | cut -d : -f 2,3 \
+        | tr -d \" \
+        | wget -qi -
+
+    echo "Download Complete"
+}
+
 #ssh
 alias tesla="ssh chajmart@tesla.cs.iupui.edu"
 #getting ip
@@ -28,7 +51,11 @@ alias download_catch="wget https://github.com/catchorg/Catch2/releases/download/
 alias builda="source ~/.terminal_aliases"
 
 # list aliases
-alias als="bat ~/.terminal_aliases"
+if hash bat 2>/dev/null/; then
+    alias als="bat ~/.terminal_aliases"
+else
+    alias als="cat ~/.terminal_aliases"
+fi
 
 curl -s https://api.github.com/octocat #pretty octocat with a quote
 echo "To See aliases: 'als'"
