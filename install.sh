@@ -27,6 +27,10 @@ gitInstaller () {
     echo "Download Complete"
 }
 
+brew_ins(){
+    brew install $1
+}
+
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -34,36 +38,59 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$(uname)" == "Darwin" ]
 then
     echo "Hello Mac User!"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
     # Systems programs
-    brew install\
-        wget\
-        curl\
-        fish\
-        nvim\
-        nodejs\ 
-        npm\ 
-        tmux\
-        python3\
-        ssh-copy-id\
-        pandoc\
-        bat
+    brew_ins wget
+    brew_ins curl
+    brew_ins fish
+    brew_ins nvim
+    brew_ins nodejs 
+    brew_ins npm 
+    brew_ins tmux
+    brew_ins python3
+    brew_ins ssh-copy-id
+    brew_ins pandoc
+    brew_ins bat
     brew install caskroom/cask/iterm2
     brew install caskroom/cask/google-chrome
     brew tap caskroom/cask
     # User Programs
-    brew cask install\
-        lastpass\
-        atom\
-        jetbrains-toolbox\
-        spotify\
-        duet\
-        disk-inventory-x
+    brew cask install lastpass
+    brew cask install atom
+    brew cask install jetbrains-toolbox
+    brew cask install spotify
+    brew cask install slack
+    brew cask install discord
+    brew cask install duet
+    brew cask install dash
+    brew cask install dropbox
+    brew cask install disk-inventory-x
+    brew cask install resilio sync
+    brew cask install box-sync
+    brew cask install vlc
+    brew cask install transmission
+    brew cask install wireshark
+    brew cask install angry-ip-scanner
+    brew cask install tunnelblick
+    brew cask install postman
+    brew cask install docker
+    brew cask install gitkraken
+    brew cask install mactex   
+
+    brew cask install skim
+    defaults write -app Skim SKAutoReloadFileUpdate -boolean true 
+
     #install programming font
     brew tap caskroom/fonts
     brew cask install font-fira-code
-    echo "Oh-myFish need to be install manually. For Mac"
+
+
+    brew search spectacle             # Searches all known Casks for a partial or exact match.
+    brew cask info spectacle          # Displays information about the given Cask
+    
+    brew cask install spectacle
+    #echo "Oh-myFish need to be install manually. For Mac"
     # install vim plug for mac
 
 elif [ "$(uname)" == "Linux" ]
@@ -97,7 +124,8 @@ fi
 sudo pip install --upgrade pip
 pip install --user neovim jedi psutil setproctitle # nvim
 
-
+curl https://raw.githubusercontent.com/connermcd/gtd/master/gtd > get_shit_done.sh
+chmod 777 get_shit_done.sh
 
 . "$DOTFILES_DIR/linking.sh"
 . "$DOTFILES_DIR/git_config.sh"

@@ -16,12 +16,10 @@ ln -sfv $DOTFILES_DIR/gitignoreGlobal.sh ~/.gitignore
 echo "source ~/.terminal_aliases" >> ~/.bashrc
 echo "source ~/.terminal_aliases" >> ~/.zshrc
 
-ln -sfv $DOTFILES_DIR/ngrok ~/ngrok
+ln -sfv $DOTFILES_DIR/get_shit_done.sh ~/pomodoro.sh
 
-mkdir ~/.config
-mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 ln -sfv $DOTFILES_DIR/neovim.vim ~/.config/nvim/init.vim
 
-mkdir ~/.config/fish/
-mkdir ~/.config/fish/functions/
+mkdir -p ~/.config/fish/functions/
 ln -sfv $DOTFILES_DIR/fish_terminal.sh ~/.config/fish/functions/fish_prompt.fish

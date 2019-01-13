@@ -12,7 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 "" Text hightlighting
 
-Plug 'bfrg/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Rip-Rip/clang_complete'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
@@ -30,7 +30,7 @@ Plug 'JBakamovic/yavide'
 
 "vim-workspaces
 Plug 'thaerkh/vim-workspace'
-
+Plug '907th/vim-auto-save' " Auto saves
 " Open brower windows
 Plug 'tyru/open-browser.vim'
 
@@ -77,6 +77,18 @@ endif
 Plug 'haya14busa/incsearch.vim'
 
 Plug 'janko-m/vim-test'
+
+" Writing stuff
+Plug 'reedes/vim-pencil'
+Plug 'tpope/vim-abolish' " Fancy abbreviation replacements
+Plug 'junegunn/limelight.vim' " Highlights only active paragraph
+Plug 'junegunn/goyo.vim' " Full screen writing mode
+Plug 'reedes/vim-lexical' " Better spellcheck mappings
+Plug 'reedes/vim-litecorrect' " Better autocorrections
+Plug 'reedes/vim-textobj-sentence' " Treat sentences as text objects
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
+
 " Initialize plugin system
 call plug#end()
 
@@ -204,3 +216,24 @@ colorscheme slate
 " might need to change this path based on system
 let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
 let g:python3_host_prog ='/Users/josh/.pyenv/versions/neovim3/bin/python'
+
+augroup pencil
+   autocmd!
+   autocmd filetype markdown,mkd call pencil#init()
+       \ | call lexical#init()
+       \ | call litecorrect#init()
+       \ | setl spell spl=en_us fdl=4 noru nonu nornu
+       \ | setl fdo+=search
+  augroup END
+ " Pencil / Writing Controls {{{
+   let g:pencil#wrapModeDefault = 'soft'
+   let g:pencil#textwidth = 74
+   let g:pencil#joinspaces = 0
+   let g:pencil#cursorwrap = 1
+   let g:pencil#conceallevel = 3
+   let g:pencil#concealcursor = 'c'
+   let g:pencil#softDetectSample = 20
+   let g:pencil#softDetectThreshold = 130
+ " }}}
+ "
+let g:auto_save = 1  " do not display the auto-save notification
