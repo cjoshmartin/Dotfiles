@@ -193,6 +193,8 @@ let g:workspace_undodir='.undodir'
 " Closing the current buffer
 nnoremap <leader>q :Bclose<CR>
 
+" Make command
+map <leader>m :make<CR>
 " incsearch.vim 
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -214,8 +216,11 @@ nmap <leader>c :TagbarToggle<CR>
 colorscheme slate
 
 " might need to change this path based on system
-let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-let g:python3_host_prog ='/Users/josh/.pyenv/versions/neovim3/bin/python'
+"let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+"let g:python3_host_prog ='/Users/josh/.pyenv/versions/neovim3/bin/python'
+
+let g:loaded_python_provider=1
+
 
 augroup pencil
    autocmd!
