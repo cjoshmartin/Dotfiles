@@ -5,15 +5,6 @@
 # *xargs (MAC) - allows you to pipe the output of one program as input to another
 # }
 
-function doi2bib
-# Takes a DOI from a reference paper and makes a bib file
-# use `pdfinfo` or crossrefernce.org to find the DOI
-#https://www.youtube.com/watch?v=nO4T8JDNYG0
-    echo >> bib.bib;
-    curl -s "http://api.crossref.org/works/$1/transform/application/x-bibtex" >> bib.bib;
-    echo >> bib.bib;
-end
-
 
 #Changing Dir {
 alias down="cd ~/Downloads/"
