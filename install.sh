@@ -38,7 +38,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ "$(uname)" == "Darwin" ]
 then
     echo "Hello Mac User!"
-    #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
     # Systems programs
     brew_ins wget
@@ -66,8 +66,8 @@ then
     brew cask install dash
     brew cask install dropbox
     brew cask install disk-inventory-x
-    brew cask install resilio sync
-    brew cask install box-sync
+    brew cask install resilio-sync
+    brew cask install box-drive
     brew cask install vlc
     brew cask install transmission
     brew cask install wireshark
@@ -108,7 +108,6 @@ then
         zsh\
         git-core\
         tmux\
-        vim-gtk\
         nvim\
         nodejs\ 
         npm
