@@ -21,7 +21,7 @@ pyenv which python  >> python_paths.txt
 # of what env is currently active.  Repeat this pattern for other
 # packages that provide cli programs that are used in Neovim.
 pip install flake8
-ln -s `pyenv which flake8` ~/bin/flake8 
+#ln -s `pyenv which flake8` ~/bin/flake8 
 
 
 cat ./python_paths.txt
