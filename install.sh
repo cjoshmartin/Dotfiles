@@ -30,6 +30,9 @@ gitInstaller () {
 brew_ins(){
     brew install $1
 }
+user_program_install(){
+    brew cask install $1
+}
 
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -56,40 +59,40 @@ then
     brew install caskroom/cask/google-chrome
     brew tap caskroom/cask
     # User Programs
-    brew cask install lastpass
-    brew cask install atom
-    brew cask install jetbrains-toolbox
-    brew cask install spotify
-    brew cask install slack
-    brew cask install discord
-    brew cask install duet
-    brew cask install dash
-    brew cask install dropbox
-    brew cask install disk-inventory-x
-    brew cask install resilio-sync
-    brew cask install box-drive
-    brew cask install vlc
-    brew cask install transmission
-    brew cask install wireshark
-    brew cask install angry-ip-scanner
-    brew cask install tunnelblick
-    brew cask install postman
-    brew cask install docker
-    brew cask install gitkraken
-    brew cask install mactex   
+    user_program_install lastpass
+    user_program_install atom
+    user_program_install jetbrains-toolbox
+    user_program_install spotify
+    user_program_install slack
+    user_program_install discord
+    user_program_install duet
+    user_program_install dash
+    user_program_install dropbox
+    user_program_install disk-inventory-x
+    user_program_install resilio-sync
+    user_program_install box-drive
+    user_program_install vlc
+    user_program_install transmission
+    user_program_install wireshark
+    user_program_install angry-ip-scanner
+    user_program_install tunnelblick
+    user_program_install postman
+    user_program_install docker
+    user_program_install gitkraken
+    user_program_install mactex   
 
-    brew cask install skim
+    user_program_install skim
     defaults write -app Skim SKAutoReloadFileUpdate -boolean true 
 
     #install programming font
     brew tap caskroom/fonts
-    brew cask install font-fira-code
+    user_program_install font-fira-code
 
 
     brew search spectacle             # Searches all known Casks for a partial or exact match.
     brew cask info spectacle          # Displays information about the given Cask
     
-    brew cask install spectacle
+    user_program_install spectacle
     #echo "Oh-myFish need to be install manually. For Mac"
     # install vim plug for mac
 
