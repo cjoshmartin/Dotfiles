@@ -20,6 +20,7 @@ fi
 sudo pip install --upgrade pip
 pip install --user neovim jedi psutil setproctitle # nvim
 
+omf install nvm
 curl https://raw.githubusercontent.com/connermcd/gtd/master/gtd > get_shit_done.sh
 chmod 777 get_shit_done.sh
 

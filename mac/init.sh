@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-cli_programs=("wget" "curl" "fish" "nvim" "nodejs " "npm " "tmux" "python3" "ssh-copy-id" "pandoc" "bat")
-user_programs=( "lastpass" "atom" "jetbrains-toolbox" "spotify" "slack" "discord" "duet" "dash" "dropbox" "disk-inventory-x" "resilio-sync" "box-drive" "vlc" "transmission" "wireshark" "angry-ip-scanner" "tunnelblick" "postman" "docker" "gitkraken" "mactex" "skim")
+cli_programs=("wget" "curl" "fish" "nvim" "nodejs " "npm " "tmux" "python3" "ssh-copy-id" "pandoc" "bat" "yarn")
+user_programs=( "lastpass"  "jetbrains-toolbox" "spotify" "slack" "discord" "duet" "dash" "dropbox" "disk-inventory-x" "resilio-sync" "box-drive" "vlc" "transmission" "wireshark" "angry-ip-scanner" "tunnelblick" "postman" "docker" "gitkraken" "mactex" "skim")
 
 user_program_install(){
     brew cask install $1

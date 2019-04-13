@@ -98,8 +98,6 @@ set mouse=a
 nnoremap <F6> :w
 set guifont=Menlo\ Regular:h18 "font
 set showcmd             " show command in bottom bar
-set number
-set relativenumber
 map ; :
 set backspace=indent,eol,start
 
@@ -217,9 +215,11 @@ colorscheme slate
 
 " might need to change this path based on system
 "let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-"let g:python3_host_prog ='/Users/josh/.pyenv/versions/neovim3/bin/python'
 
-let g:loaded_python_provider=1
+let g:python2_host_prog ='/Users/joshmartin/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog ='/Users/joshmartin/.pyenv/versions/neovim3/bin/python'
+
+"let g:loaded_python_provider=1
 
 
 augroup pencil
@@ -242,3 +242,12 @@ augroup pencil
  " }}}
  "
 let g:auto_save = 1  " do not display the auto-save notification
+
+" I have some trouble reading and proof reading espically 
+" So I found this reddit thread that allows me to have TTS in vim
+" https://www.reddit.com/r/vim/comments/2odq4l/osx_texttospeech_in_vim/cmroh22?utm_source=share&utm_medium=web2x
+vnoremap <silent><leader>r "xy:call system('say '. shellescape(@x) .' &')<CR>
+nnoremap <silent><leader>r :call system('say '.shellescape(expand('<cword>')).' &')<CR>
+
+set number
+set relativenumber
