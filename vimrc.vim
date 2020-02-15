@@ -12,13 +12,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 "" Text hightlighting
 
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'Rip-Rip/clang_complete'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-markdown'
 Plug 'elzr/vim-json'
-Plug 'ervandew/eclim'
 Plug 'tmux-plugins/vim-tmux' 
 Plug 'ekalinin/Dockerfile.vim'
 "js setup
@@ -26,57 +21,26 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim'
 " clang setup?
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Rip-Rip/clang_complete'
 Plug 'JBakamovic/yavide'
 
 "vim-workspaces
-Plug 'thaerkh/vim-workspace'
 Plug '907th/vim-auto-save' " Auto saves
-" Open brower windows
-Plug 'tyru/open-browser.vim'
-
-" better window navigation
-Plug 't9md/vim-choosewin'
-
 "for closing current buffer (:Bclose)
 Plug 'rbgrouleff/bclose.vim'
 
 "inline git files diffs
 Plug 'mhinz/vim-signify'
 
-" cool plugin to test code
-Plug 'metakirby5/codi.vim'
-
 "A class outline for c++ or the OOP 
 Plug 'majutsushi/tagbar'
 
-" vim-startify
-Plug 'mhinz/vim-startify'
 "" fuzz finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Asynchronous Lint Engine
-Plug 'w0rp/ale'
-"
-
 " auto complete
-"Plug 'ncm2/ncm2'
-
-Plug 'rizzatti/dash.vim'
-
-"
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-endif
-
-
-" better in file search
-Plug 'haya14busa/incsearch.vim'
-
-Plug 'janko-m/vim-test'
 
 " Writing stuff
 Plug 'reedes/vim-pencil'
@@ -117,6 +81,8 @@ set clipboard=unnamed "sets vim's clipboard to the system clipboard (NOTE: a ver
 
 ""  to lazy to hold shift
 map ; :
+" no space
+nnoremap g_ $
 
 filetype plugin on
 
@@ -126,8 +92,14 @@ filetype plugin on
  set softtabstop=4
  set expandtab
 
+ " Export of pdfs easier
+nnoremap <silent><leader>e :Pandoc pdf<CR>
 
+nnoremap <leader>\ :vsplit<CR>
+nnoremap <leader>- :split<CR>
 
+nnoremap <leader>[ [sz=
+nnoremap <leader>] ]sz=
 " Nerd Tree stuff
 
 autocmd StdinReadPre * let s:std_in=1
