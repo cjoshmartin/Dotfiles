@@ -17,7 +17,7 @@ brew update
 # Systems programs
 
 for cli in "${cli_programs[@]}"; do
-    brew_inst cli
+    brew install cli
 done
 brew install caskroom/cask/iterm2
 brew install caskroom/cask/google-chrome
