@@ -26,7 +26,7 @@ Plug 'Rip-Rip/clang_complete'
 Plug 'JBakamovic/yavide'
 
 "vim-workspaces
-Plug '907th/vim-auto-save' " Auto saves
+"Plug '907th/vim-auto-save' " Auto saves
 "for closing current buffer (:Bclose)
 Plug 'rbgrouleff/bclose.vim'
 
@@ -71,12 +71,6 @@ set clipboard=unnamed "sets vim's clipboard to the system clipboard (NOTE: a ver
 nnoremap g_ $
 
 filetype plugin on
-
-" Indentation settings for using 4 spaces instead of tabs.
-" " Do not change 'tabstop' from its default value of 8 with this setup.
- set shiftwidth=4
- set softtabstop=4
- set expandtab
 
  " Export of pdfs easier
 nnoremap <silent><leader>e :Pandoc pdf<CR>
@@ -133,7 +127,8 @@ let g:cpp_concepts_highlight = 1
 
 
 "fzf settings
-map <leader>F :Files<CR>
+"
+map <leader>f :Files<CR>
 map <leader>b :Buffers<CR>
 map <leader>m :Maps<CR>
 
@@ -172,7 +167,6 @@ augroup pencil
    let g:pencil#softDetectThreshold = 130
  " }}}
  "
-let g:auto_save = 1  " do not display the auto-save notification
 
 " I have some trouble reading and proof reading espically 
 " So I found this reddit thread that allows me to have TTS in vim
@@ -185,10 +179,6 @@ set number
 
 " Test edit
 "
-
-" if hidden is not set, TextEdit might fail.
-set hidden
-
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
@@ -255,8 +245,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+"xmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!

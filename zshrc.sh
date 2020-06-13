@@ -38,3 +38,4 @@ eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.terminal_aliases
+source ~/.terminal_aliases
