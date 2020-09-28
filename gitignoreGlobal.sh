@@ -3,3 +3,7 @@
 get_shit_done.sh
 flake8
 python_paths.txt
+
+.idea/
+
+htmlcov/
