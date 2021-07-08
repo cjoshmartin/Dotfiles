@@ -13,10 +13,6 @@ ln -sfv $DOTFILES_DIR/vimrc.vim ~/.vimrc
 ln -sfv $DOTFILES_DIR/alias.sh ~/.terminal_aliases
 ln -sfv $DOTFILES_DIR/gitignoreGlobal.sh ~/.gitignore
 
-echo "source ~/.terminal_aliases" >> ~/.bashrc
-echo "source ~/.terminal_aliases" >> ~/.zshrc
-
-ln -sfv $DOTFILES_DIR/get_shit_done.sh ~/pomodoro.sh
 
 mkdir -p ~/.config/nvim
 ln -sfv $DOTFILES_DIR/neovim.vim ~/.config/nvim/init.vim

@@ -8,13 +8,10 @@
 
 #Changing Dir {
 alias down="cd ~/Downloads/"
-alias senior="cd ~/Desktop/school/Senior"
 alias projects="cd ~/Desktop/projects"
 #}
 
 alias pomodoro="~/poamodoro.sh"
-alias tesla="ssh chajmart@tesla.cs.iupui.edu" #ssh
-alias callhome="ssh joshmartin@50.90.106.69"
 alias ip="ipconfig getifaddr en0" #getting ip
 
 alias fucking="sudo" # pass aggressive way to deal with being upset

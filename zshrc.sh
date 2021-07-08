@@ -37,6 +37,4 @@ ngrok(){
 eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source ~/.terminal_aliases
-source ~/.terminal_aliases
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
