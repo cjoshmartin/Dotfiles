@@ -7,6 +7,9 @@ endif
 call plug#begin('~/.vim/plugged')
 "" Plugs go here!
 
+Plug 'rizzatti/dash.vim'
+
+
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
