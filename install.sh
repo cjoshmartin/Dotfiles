@@ -15,11 +15,10 @@ elif [ "$(uname)" == "Linux" ]
 then
     . "$DOTFILES_DIR/linux/init.sh"
 fi
+sudo pip3 install --upgrade pip
+pip3 install --user neovim jedi psutil setproctitle # nvim
 
-. "$DOTFILES_DIR/neovim_python_fix.sh"
-sudo pip install --upgrade pip
-pip install --user neovim jedi psutil setproctitle # nvim
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-omf install nvm
 . "$DOTFILES_DIR/linking.sh"
 . "$DOTFILES_DIR/git_config.sh"
